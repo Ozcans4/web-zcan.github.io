@@ -1,0 +1,203 @@
+/* General Styling */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 100px 0;
+    background: #222;
+}
+
+.section_title {
+    margin-bottom: 30px;
+}
+
+.section_title h2 {
+    position: relative;
+    text-align: center;
+    color: white; /* Başlık yazısını beyaz yap */
+    transition: all .5s ease-in-out;
+}
+
+.section_title h2:hover {
+    background-color: aliceblue;
+}
+
+/* Header */
+header {
+    background: #222;
+    border-bottom: 5px solid rgb(210, 30, 180);
+    position: fixed;
+    width: 100%;
+    z-index: 10; /* Z-index değeri arttırıldı */
+    top: 0;
+    left: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px 0;
+}
+
+.nav_links {
+    display: flex;
+}
+
+.nav_links li a {
+    margin-left: 15px;
+    color: aliceblue;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.nav_links li a:hover {
+    background-color: rgb(210, 30, 156);
+}
+
+.logo h2 a {
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+/* Main Page */
+.inner_anasayfa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+    color: aliceblue;
+}
+
+.child_anasayfa {
+    flex-basis: 45%;
+}
+
+.child_anasayfa h1 {
+    font-size: 80px;
+    color: rgb(210, 30, 180);
+    font-family: sans-serif;
+}
+
+/* About Section */
+.inner_testi {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    color: aliceblue;
+}
+
+/* Projects Section */
+.inner_testi2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(247, 248, 248);
+}
+
+.inner_testi2 p {
+    color: white; /* Projeler kısmındaki metin yazısını beyaz yap */
+}
+
+/* Contact Section */
+.inner_contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.child_contact {
+    flex-basis: 45%;
+}
+
+.child_contact form {
+    padding: 50px 40px;
+    background: rgb(210, 30, 141);
+    border-radius: 5px;
+}
+
+.child_contact form input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: rgb(255, 255, 255);
+    border: none;
+    resize: none;
+    border-radius: 25px;
+    transition: .3s ease-in-out;
+}
+
+.child_contact form input:last-child:hover {
+    background: transparent;
+    color: aliceblue;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav_links li {
+        margin: 5px 0;
+    }
+
+    .inner_anasayfa {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .child_anasayfa {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .child_anasayfa h1 {
+        font-size: 50px;
+    }
+
+    .inner_contact {
+        flex-direction: column;
+    }
+
+    .child_contact {
+        flex-basis: 100%;
+    }
+}
